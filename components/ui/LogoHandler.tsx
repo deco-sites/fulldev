@@ -7,8 +7,7 @@ export interface Props {
 
 export const TechStacks = [{
   name: "React",
-  logoUrl:
-    "https://img.icons8.com/?size=512&id=bzf0DqjXFHIW&format=png",
+  logoUrl: "https://img.icons8.com/?size=512&id=bzf0DqjXFHIW&format=png",
 }, {
   name: "Angular",
   logoUrl: "https://img.icons8.com/?size=512&id=71257&format=png",
@@ -66,18 +65,16 @@ export const TechStacks = [{
 }];
 
 export const TechSelector = (props: Props) => {
-
-  const [selectedTech, setSelected] = useState("")
+  const [selectedTech, setSelected] = useState("");
 
   const select = (selectedTech: string) => {
-    
     TechStacks.forEach((index) => {
       if (index.name.toLowerCase() === selectedTech.toLowerCase()) {
         setSelected(index.logoUrl);
       }
     });
   };
-  select(props.name)
+  select(props.name);
   return (
     <Image
       class="rounded-full"
