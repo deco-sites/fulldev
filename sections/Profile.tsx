@@ -62,11 +62,13 @@ export default function Profile({
       className="flex flex-col items-center justify-between p-5 md:p-10 text-white bg-white rounded-lg md:w-1/3 min-h-[70vh]"
       style={{ backgroundColor: profileBgColorStyle }}
     >
-      {!avatarImageUrl ? null : <Avatar
-        avatarBackgroundColor={avatarBackgroundColor}
-        name={name}
-        avatarUrl={avatarImageUrl}
-      />}
+      {!avatarImageUrl ? null : (
+        <Avatar
+          avatarBackgroundColor={avatarBackgroundColor}
+          name={name}
+          avatarUrl={avatarImageUrl}
+        />
+      )}
       <p className={`text-2xl md:text-4xl ${!name && "text-gray-400"}`}>
         {name || "Name"}
       </p>

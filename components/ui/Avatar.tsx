@@ -9,11 +9,11 @@ export interface Color {
 export function Avatar({
   avatarBackgroundColor,
   name,
-  avatarUrl
+  avatarUrl,
 }: {
   avatarBackgroundColor: Color;
   name: string;
-  avatarUrl: string
+  avatarUrl: string;
 }) {
   const avatarBgColorStyle =
     `rgb(${avatarBackgroundColor.red}, ${avatarBackgroundColor.green}, ${avatarBackgroundColor.blue})`;
