@@ -7,11 +7,9 @@ import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$$$$$0 from "./sections/DesignSystem.tsx";
-
 import * as $$$$$$$$1 from "./sections/Head.tsx";
 import * as $$$$$$$$2 from "./sections/Header.tsx";
 import * as $$$$$$$$3 from "./sections/Home.tsx";
-
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";

@@ -68,7 +68,7 @@ export const TechStacks = [{
 }];
 
 export const TechSelector = (props: Props) => {
-  const [selectedTech, setSelected] = useState("");
+  const [selectedTech, setSelected] = useState(props.name);
 
   const select = (selectedTech: string) => {
     TechStacks.forEach((index) => {
