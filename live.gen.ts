@@ -7,9 +7,11 @@ import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$$$$$0 from "./sections/DesignSystem.tsx";
-import * as $$$$$$$$1 from "./sections/GetStarted.tsx";
-import * as $$$$$$$$2 from "./sections/Head.tsx";
-import * as $$$$$$$$3 from "./sections/Profile.tsx";
+
+import * as $$$$$$$$1 from "./sections/Head.tsx";
+import * as $$$$$$$$2 from "./sections/Header.tsx";
+import * as $$$$$$$$3 from "./sections/Home.tsx";
+
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -166,9 +168,9 @@ const manifest = {
     "$live/sections/Slot.tsx": i2$$$$1,
     "$live/sections/UseSlot.tsx": i2$$$$2,
     "deco-sites/fulldev/sections/DesignSystem.tsx": $$$$$$$$0,
-    "deco-sites/fulldev/sections/GetStarted.tsx": $$$$$$$$1,
-    "deco-sites/fulldev/sections/Head.tsx": $$$$$$$$2,
-    "deco-sites/fulldev/sections/Profile.tsx": $$$$$$$$3,
+    "deco-sites/fulldev/sections/Head.tsx": $$$$$$$$1,
+    "deco-sites/fulldev/sections/Header.tsx": $$$$$$$$2,
+    "deco-sites/fulldev/sections/Home.tsx": $$$$$$$$3,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,
