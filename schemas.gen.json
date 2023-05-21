@@ -7329,6 +7329,10 @@
           "type": "string",
           "title": "Name"
         },
+        "avatarImageUrl": {
+          "type": "string",
+          "title": "Avatar Image Url"
+        },
         "jobDescription": {
           "type": "string",
           "title": "Job Description"
@@ -7347,6 +7351,10 @@
                   {
                     "type": "string",
                     "const": "React"
+                  },
+                  {
+                    "type": "string",
+                    "const": "JavaScript"
                   },
                   {
                     "type": "string",
@@ -7436,6 +7444,7 @@
         "profileBackgroundColor",
         "avatarBackgroundColor",
         "name",
+        "avatarImageUrl",
         "jobDescription",
         "location",
         "stackName"

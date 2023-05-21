@@ -12,6 +12,9 @@ export const TechStacks = [{
   name: "Angular",
   logoUrl: "https://img.icons8.com/?size=512&id=71257&format=png",
 }, {
+  name: "JavaScript",
+  logoUrl: "https://img.icons8.com/?size=512&id=108784&format=png",
+},{
   name: "Vue.js",
   logoUrl: "https://img.icons8.com/?size=512&id=rY6agKizO9eb&format=png",
 }, {

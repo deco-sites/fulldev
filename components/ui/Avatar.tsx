@@ -9,9 +9,11 @@ export interface Color {
 export function Avatar({
   avatarBackgroundColor,
   name,
+  avatarUrl
 }: {
   avatarBackgroundColor: Color;
   name: string;
+  avatarUrl: string
 }) {
   const avatarBgColorStyle =
     `rgb(${avatarBackgroundColor.red}, ${avatarBackgroundColor.green}, ${avatarBackgroundColor.blue})`;
@@ -23,7 +25,7 @@ export function Avatar({
     >
       <Image
         className="rounded-full w-full h-full object-cover shadow-lg"
-        src="https://avatars.githubusercontent.com/u/93120693?v=4"
+        src={avatarUrl}
         title={name || "Name"}
         alt={name || "Name"}
         width={88}

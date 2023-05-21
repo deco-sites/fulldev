@@ -1,6 +1,5 @@
 import { TechSelector } from "../components/ui/LogoHandler.tsx";
 import { Avatar } from "../components/ui/Avatar.tsx";
-import Image from "deco-sites/std/components/Image.tsx";
 
 export interface Color {
   red: number;
@@ -18,11 +17,13 @@ export interface Props {
   profileBackgroundColor: Color;
   avatarBackgroundColor: Color;
   name: string;
+  avatarImageUrl: string;
   jobDescription: string;
   location: Location;
   stackName: Array<{
     iconName:
       | "React"
+      | "JavaScript"
       | "Angular"
       | "Vue.js"
       | "Node.js"
@@ -47,6 +48,7 @@ export interface Props {
 export default function Profile({
   profileBackgroundColor,
   avatarBackgroundColor,
+  avatarImageUrl,
   name,
   jobDescription,
   location,
@@ -60,7 +62,11 @@ export default function Profile({
       className="flex flex-col items-center justify-between p-5 md:p-10 text-white bg-white rounded-lg md:w-1/3 min-h-[70vh]"
       style={{ backgroundColor: profileBgColorStyle }}
     >
-      <Avatar avatarBackgroundColor={avatarBackgroundColor} name={name} />
+      {!avatarImageUrl ? null : <Avatar
+        avatarBackgroundColor={avatarBackgroundColor}
+        name={name}
+        avatarUrl={avatarImageUrl}
+      />}
       <p className={`text-2xl md:text-4xl ${!name && "text-gray-400"}`}>
         {name || "Name"}
       </p>
