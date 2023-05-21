@@ -71,8 +71,9 @@
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
               "deco-sites/fulldev/sections/DesignSystem.tsx",
-              "deco-sites/fulldev/sections/GetStarted.tsx",
               "deco-sites/fulldev/sections/Head.tsx",
+              "deco-sites/fulldev/sections/Header.tsx",
+              "deco-sites/fulldev/sections/Home.tsx",
               "deco-sites/std/sections/Analytics.tsx",
               "deco-sites/std/sections/configButterCMS.global.tsx",
               "deco-sites/std/sections/configOCC.global.tsx",
@@ -7215,20 +7216,6 @@
       "required": [],
       "title": "deco-sites/fulldev/sections/DesignSystem.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0dldFN0YXJ0ZWQudHN4@Props": {
-      "type": "object",
-      "properties": {
-        "enableInspectVSCode": {
-          "type": [
-            "boolean",
-            "null"
-          ],
-          "title": "Enable Inspect V S Code"
-        }
-      },
-      "required": [],
-      "title": "deco-sites/fulldev/sections/GetStarted.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0hlYWQudHN4@Props": {
       "type": "object",
       "properties": {
@@ -7266,6 +7253,228 @@
         "themeColor"
       ],
       "title": "deco-sites/fulldev/sections/Head.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0hlYWRlci50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "headerColor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "bg-purple-700"
+            },
+            {
+              "type": "string",
+              "const": "bg-green-700"
+            },
+            {
+              "type": "string",
+              "const": "bg-blue-700"
+            }
+          ],
+          "type": "string",
+          "title": "Header Color"
+        }
+      },
+      "required": [
+        "headerColor"
+      ],
+      "title": "deco-sites/fulldev/sections/Header.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0hvbWUudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "developerLevel": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "title": "Title"
+            },
+            "developerLevel": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "const": "Junior"
+                },
+                {
+                  "type": "string",
+                  "const": "Pleno"
+                },
+                {
+                  "type": "string",
+                  "const": "Senior"
+                }
+              ],
+              "type": "string",
+              "title": "Developer Level"
+            }
+          },
+          "required": [
+            "title",
+            "developerLevel"
+          ],
+          "title": "Developer Level"
+        },
+        "aboutMe": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "title": "Title"
+            },
+            "description": {
+              "type": "string",
+              "title": "Description"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string",
+                    "title": "Description"
+                  },
+                  "url": {
+                    "type": "string",
+                    "title": "Url"
+                  }
+                },
+                "required": [
+                  "description",
+                  "url"
+                ]
+              },
+              "title": "Links"
+            }
+          },
+          "required": [
+            "title",
+            "description"
+          ],
+          "title": "About Me"
+        },
+        "certificates": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "title": "Title"
+            },
+            "certification": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "certificationName": {
+                    "type": "string",
+                    "title": "Certification Name"
+                  },
+                  "color": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "const": "blue"
+                      },
+                      {
+                        "type": "string",
+                        "const": "red"
+                      }
+                    ],
+                    "type": "string",
+                    "title": "Color"
+                  },
+                  "urlCertification": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "title": "Url Certification"
+                  }
+                },
+                "required": [
+                  "certificationName",
+                  "color"
+                ]
+              },
+              "title": "Certification"
+            }
+          },
+          "required": [
+            "title",
+            "certification"
+          ],
+          "title": "Certificates"
+        },
+        "Projects": {
+          "type": "object",
+          "properties": {
+            "projectDescription": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "projectName": {
+                    "type": "string",
+                    "title": "Project Name"
+                  },
+                  "technologiesUsed": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "title": "Technologies Used"
+                  },
+                  "aboutTheProject": {
+                    "type": "string",
+                    "title": "About The Project"
+                  },
+                  "links": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "description": {
+                          "type": "string",
+                          "title": "Description"
+                        },
+                        "url": {
+                          "type": "string",
+                          "title": "Url"
+                        }
+                      },
+                      "required": [
+                        "description",
+                        "url"
+                      ]
+                    },
+                    "title": "Links"
+                  }
+                },
+                "required": [
+                  "projectName",
+                  "technologiesUsed",
+                  "aboutTheProject",
+                  "links"
+                ]
+              },
+              "title": "Project Description"
+            }
+          },
+          "required": [
+            "projectDescription"
+          ],
+          "title": " Projects"
+        }
+      },
+      "required": [
+        "developerLevel",
+        "aboutMe",
+        "certificates",
+        "Projects"
+      ],
+      "title": "deco-sites/fulldev/sections/Home.tsx@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props": {
       "type": "object",
@@ -9397,27 +9606,6 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0dldFN0YXJ0ZWQudHN4": {
-      "title": "deco-sites/fulldev/sections/GetStarted.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0dldFN0YXJ0ZWQudHN4@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/fulldev/sections/GetStarted.tsx"
-          ],
-          "default": "deco-sites/fulldev/sections/GetStarted.tsx"
-        }
-      }
-    },
     "ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0hlYWQudHN4": {
       "title": "deco-sites/fulldev/sections/Head.tsx",
       "type": "object",
@@ -9436,6 +9624,48 @@
             "deco-sites/fulldev/sections/Head.tsx"
           ],
           "default": "deco-sites/fulldev/sections/Head.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0hlYWRlci50c3g=": {
+      "title": "deco-sites/fulldev/sections/Header.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0hlYWRlci50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/fulldev/sections/Header.tsx"
+          ],
+          "default": "deco-sites/fulldev/sections/Header.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0hvbWUudHN4": {
+      "title": "deco-sites/fulldev/sections/Home.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0hvbWUudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/fulldev/sections/Home.tsx"
+          ],
+          "default": "deco-sites/fulldev/sections/Home.tsx"
         }
       }
     },
@@ -10496,10 +10726,13 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0dldFN0YXJ0ZWQudHN4"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0hlYWQudHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0hlYWQudHN4"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0hlYWRlci50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9mdWxsZGV2L3NlY3Rpb25zL0hvbWUudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA=="
